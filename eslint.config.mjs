@@ -24,13 +24,16 @@ export default [
   {
     rules: {
       "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-empty-object-type": [
+        "error",
+        { allowInterfaces: "with-single-extends" },
+      ],
       "prettier/prettier": [
         "error",
         {
           endOfLine: "auto",
         },
       ],
-      allowInterfaces: 'with-single-extends' 
     },
   },
   eslintPluginPrettierRecommended,
