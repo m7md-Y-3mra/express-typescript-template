@@ -1,8 +1,8 @@
-import globals from "globals";
 import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
 import jest from "eslint-plugin-jest";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default [
   {
@@ -30,6 +30,7 @@ export default [
           endOfLine: "auto",
         },
       ],
+      allowInterfaces: 'with-single-extends' 
     },
   },
   eslintPluginPrettierRecommended,
