@@ -1,11 +1,11 @@
-class CustomError<C extends string> extends Error {
-  statusCode: number;
-  code?: C;
+import { ErrorStatusCode } from "./types";
 
-  constructor({ message, statusCode, code }: { message: string; statusCode: number; code?: C }) {
+class CustomError extends Error {
+  statusCode: ErrorStatusCode;
+
+  constructor({ message, statusCode }: { message: string; statusCode: ErrorStatusCode }) {
     super(message);
     this.statusCode = statusCode;
-    this.code = code;
   }
 }
 
