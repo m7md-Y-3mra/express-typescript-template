@@ -16,7 +16,7 @@ export const createServer = () => {
     .use(responseMiddleware);
 
   app.get("/health", async (req: Request, res: Response) => {
-    res.status(200).json({ ok: true, env: process.env.NODE_ENV });
+    res.sendSuccess({ ok: true, env: process.env.NODE_ENV });
   });
 
   app.use(errorHandler);

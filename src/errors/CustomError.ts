@@ -2,10 +2,20 @@ import { ErrorStatusCode } from "./types";
 
 class CustomError extends Error {
   statusCode: ErrorStatusCode;
+  errors?: Record<string, string>;
 
-  constructor({ message, statusCode }: { message: string; statusCode: ErrorStatusCode }) {
+  constructor({
+    message,
+    statusCode,
+    errors,
+  }: {
+    message: string;
+    statusCode: ErrorStatusCode;
+    errors: Record<string, string>;
+  }) {
     super(message);
     this.statusCode = statusCode;
+    this.errors = errors;
   }
 }
 
