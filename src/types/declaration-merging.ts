@@ -1,3 +1,6 @@
+import { ErrorStatusCode } from "@/errors/types";
+import { Meta } from "./response.type";
+
 /* eslint-disable @typescript-eslint/no-namespace */
 export type MyEnvs = {
   PORT: string;
@@ -9,5 +12,17 @@ export type MyEnvs = {
 declare global {
   namespace NodeJS {
     interface ProcessEnv extends MyEnvs {}
+  }
+
+  namespace Express {
+    interface Response {
+      sendSuccess<T>(data: T, message?: string, meta?: Meta): void;
+      sendError(
+        message: string,
+        statusCode?: ErrorStatusCode,
+        errors?: Record<string, string>,
+      ): void;
+      sendCreated<T>(data: T, message?: string, meta?: Meta): void;
+    }
   }
 }
