@@ -1,4 +1,4 @@
-import { MyEnvs } from "@/types/declaration-merging";
+import { MyEnvs } from "@/types";
 
 export const getEnvValue = <K extends keyof MyEnvs>(envName: K): MyEnvs[K] | undefined =>
   process.env[envName];
