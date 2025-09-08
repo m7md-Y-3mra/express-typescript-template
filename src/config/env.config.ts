@@ -1,4 +1,4 @@
-import { getEnvOrDefault, getEnvValue } from "@/utils/env-utils";
+import { getEnvOrDefault, getEnvValue } from "@/utils/env.util";
 
 export const ENV = getEnvOrDefault("NODE_ENV", "development");
 export const PORT = getEnvOrDefault("PORT", "3000");

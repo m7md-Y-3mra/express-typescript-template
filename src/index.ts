@@ -1,5 +1,5 @@
 import "module-alias/register";
-import { PORT } from "./config/env";
+import { PORT } from "./config/env.config";
 import { createServer } from "./server";
 
 const server = createServer();

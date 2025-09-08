@@ -1,4 +1,4 @@
-export const HttpErrorStatus = {
+export const HttpStatusError = {
   // Client Errors (400–499)
   BadRequest: 400, // Invalid request payload / params
   Unauthorized: 401, // Missing or invalid authentication
@@ -19,6 +19,6 @@ export const HttpErrorStatus = {
   GatewayTimeout: 504, // Upstream didn’t respond in time
 } as const;
 
-export type HttpErrorStatusType = typeof HttpErrorStatus;
+type HttpStatusErrorType = typeof HttpStatusError;
 
-export type ErrorStatusCode = HttpErrorStatusType[keyof HttpErrorStatusType];
+export type ErrorStatusCode = HttpStatusErrorType[keyof HttpStatusErrorType];

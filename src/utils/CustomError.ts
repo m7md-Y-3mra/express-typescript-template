@@ -1,4 +1,4 @@
-import { ErrorStatusCode } from "./types";
+import { ErrorStatusCode } from "../types/status-code.type";
 
 class CustomError extends Error {
   statusCode: ErrorStatusCode;

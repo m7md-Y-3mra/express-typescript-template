@@ -1,7 +1,7 @@
 import cors from "cors";
 import express, { Request, Response } from "express";
 import morgan from "morgan";
-import errorHandler from "./middleware/error-handler";
+import errorHandler from "./middleware/error-handler.middleware";
 import { responseMiddleware } from "./middleware/response.middleware";
 
 export const createServer = () => {

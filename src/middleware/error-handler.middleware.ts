@@ -1,7 +1,7 @@
-import { APP_DEBUG } from "@/config/env";
-import CustomError from "@/errors/CustomError";
-import { HttpErrorStatus } from "@/errors/types";
-import { getErrorMessage } from "@/utils/errorMessage";
+import { APP_DEBUG } from "@/config/env.config";
+import { HttpStatusError } from "@/types/status-code.type";
+import CustomError from "@/utils/CustomError";
+import { getErrorMessage } from "@/utils/error-message.util";
 import { NextFunction, Request, Response } from "express";
 
 const errorHandler = (error: unknown, req: Request, res: Response, next: NextFunction) => {
@@ -17,7 +17,7 @@ const errorHandler = (error: unknown, req: Request, res: Response, next: NextFun
 
   res.sendError(
     getErrorMessage(error) || "An error occurred. Please view logs for more details",
-    HttpErrorStatus.InternalServerError,
+    HttpStatusError.InternalServerError,
   );
 };
 
