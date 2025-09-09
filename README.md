@@ -201,10 +201,6 @@ The template includes centralized error handling:
 4. Push to branch: `git push origin feat/my-feature`
 5. Submit a pull request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 💡 Next Steps
 
 After setting up the template:
