@@ -19,7 +19,7 @@ A production-ready **Express + TypeScript starter template** with modern develop
 
 ## 📁 Project Structure
 
-```
+```text
 .
 ├── .env.example
 ├── eslint.config.mjs
